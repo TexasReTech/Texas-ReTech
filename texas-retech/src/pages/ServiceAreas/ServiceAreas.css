@@ -34,6 +34,7 @@
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 800;
   margin-bottom: 1rem;
+  color: var(--white);
 }
 
 .service-areas-hero__subtitle {
