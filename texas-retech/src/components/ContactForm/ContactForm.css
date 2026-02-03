@@ -1,0 +1,102 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.contact-form__field {
+  width: 100%;
+}
+
+.contact-form__input,
+.contact-form__select,
+.contact-form__textarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-size: var(--font-size-base);
+  color: var(--gray-800);
+  background-color: var(--white);
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.contact-form__input:focus,
+.contact-form__select:focus,
+.contact-form__textarea:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(15, 76, 228, 0.1);
+}
+
+.contact-form__input::placeholder,
+.contact-form__textarea::placeholder {
+  color: var(--gray-400);
+}
+
+.contact-form__select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239ca3af'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.25rem;
+  padding-right: 2.5rem;
+}
+
+.contact-form__textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form__message {
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+.contact-form__message--success {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.contact-form__message--error {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Hero Variant */
+.contact-form--hero .contact-form__input,
+.contact-form--hero .contact-form__select,
+.contact-form--hero .contact-form__textarea {
+  background-color: var(--white);
+  border-color: var(--white);
+}
+
+.contact-form--hero .contact-form__input:focus,
+.contact-form--hero .contact-form__select:focus,
+.contact-form--hero .contact-form__textarea:focus {
+  border-color: var(--primary-blue-light);
+}
+
+/* Sidebar Variant */
+.contact-form--sidebar {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .contact-form__row {
+    grid-template-columns: 1fr;
+  }
+}

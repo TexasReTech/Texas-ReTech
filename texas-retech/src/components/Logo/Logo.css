@@ -1,0 +1,45 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo__image {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo--icon {
+  width: auto;
+  object-fit: contain;
+}
+
+.logo--text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo__texas {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: 0.02em;
+}
+
+.logo__retech {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  letter-spacing: 0.02em;
+}
+
+.logo--white .logo__texas,
+.logo--white .logo__retech {
+  color: var(--white);
+}
+
+.logo--white {
+  filter: brightness(0) invert(1);
+}

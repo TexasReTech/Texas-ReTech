@@ -1,0 +1,256 @@
+/* About Hero */
+.about-hero {
+  position: relative;
+  padding: 10rem 0 6rem;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+  overflow: hidden;
+}
+
+.about-hero__background {
+  position: absolute;
+  inset: 0;
+}
+
+.about-hero__shape {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: var(--white);
+  clip-path: ellipse(70% 100% at 50% 100%);
+}
+
+.about-hero__container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.about-hero__title {
+  font-size: var(--font-size-5xl);
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.about-hero__subtitle {
+  font-size: var(--font-size-xl);
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Mission Section */
+.about-mission__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-mission__title {
+  font-size: var(--font-size-3xl);
+  color: var(--navy);
+  margin-bottom: 1.5rem;
+}
+
+.about-mission__text {
+  font-size: var(--font-size-lg);
+  color: var(--gray-600);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.about-mission__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-mission__image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-50) 100%);
+  border-radius: 50%;
+  color: var(--primary-blue);
+}
+
+/* Stats Section */
+.about-stats {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--navy) 100%);
+}
+
+.about-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.about-stat {
+  text-align: center;
+  color: var(--white);
+}
+
+.about-stat__number {
+  display: block;
+  font-size: var(--font-size-4xl);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.about-stat__label {
+  font-size: var(--font-size-base);
+  opacity: 0.9;
+}
+
+/* Values Section */
+.about-values__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.about-value-card {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+  transition: all var(--transition-fast);
+}
+
+.about-value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-blue);
+}
+
+.about-value-card__icon {
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.about-value-card__title {
+  font-size: var(--font-size-lg);
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+}
+
+.about-value-card__description {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Why Choose Us Section */
+.about-why__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-why__title {
+  font-size: var(--font-size-3xl);
+  color: var(--navy);
+  margin-bottom: 2rem;
+}
+
+.about-why__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-why__list li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.about-why__list li svg {
+  flex-shrink: 0;
+  color: var(--primary-blue);
+  margin-top: 0.25rem;
+}
+
+.about-why__list li strong {
+  display: block;
+  font-size: var(--font-size-lg);
+  color: var(--navy);
+  margin-bottom: 0.25rem;
+}
+
+.about-why__list li p {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+  margin: 0;
+}
+
+.about-why__truck {
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-mission__grid,
+  .about-why__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .about-stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .about-values__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .about-mission__image {
+    order: -1;
+  }
+  
+  .about-why__image {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 8rem 0 4rem;
+  }
+  
+  .about-hero__title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .about-hero__subtitle {
+    font-size: var(--font-size-lg);
+  }
+  
+  .about-stats__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .about-values__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-mission__image-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .about-mission__image-wrapper svg {
+    width: 120px;
+    height: 120px;
+  }
+}

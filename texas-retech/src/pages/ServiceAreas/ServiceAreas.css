@@ -1,0 +1,248 @@
+/* Service Areas Hero */
+.service-areas-hero {
+  position: relative;
+  padding: 8rem 0 4rem;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+  color: var(--white);
+  overflow: hidden;
+}
+
+.service-areas-hero__background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.service-areas-hero__shape {
+  position: absolute;
+  right: -10%;
+  top: -20%;
+  width: 60%;
+  height: 140%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  transform: rotate(-15deg);
+}
+
+.service-areas-hero__container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.service-areas-hero__title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.service-areas-hero__subtitle {
+  font-size: var(--font-size-xl);
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* Main Service Areas Section */
+.service-areas-main {
+  padding: 4rem 0;
+}
+
+.service-areas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 3rem;
+}
+
+/* Map Styling */
+.service-areas-map {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.texas-map-image {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+}
+
+/* Location Cards */
+.service-areas-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.service-area-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  transition: all var(--transition-base);
+}
+
+.service-area-card:hover {
+  border-color: var(--primary-blue);
+  box-shadow: var(--shadow-md);
+}
+
+.service-area-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.service-area-card__icon {
+  color: var(--primary-blue);
+  font-size: 1.5rem;
+}
+
+.service-area-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--gray-900);
+  margin: 0;
+}
+
+.service-area-card__description {
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.service-area-card__cities {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+}
+
+.service-area-card__cities strong {
+  color: var(--gray-700);
+}
+
+.service-area-card__cities p {
+  margin: 0.25rem 0 0;
+}
+
+/* Benefits Section */
+.service-areas-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.benefit-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.benefit-card__icon {
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.benefit-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 0.5rem;
+}
+
+.benefit-card__description {
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* Expansion Notice */
+.expansion-notice {
+  background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+  text-align: center;
+}
+
+.expansion-notice__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  color: var(--gray-900);
+  margin-bottom: 1rem;
+}
+
+.expansion-notice__text {
+  font-size: var(--font-size-lg);
+  color: var(--gray-600);
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+.expansion-notice__features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.expansion-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gray-700);
+  font-weight: 500;
+}
+
+.expansion-feature svg {
+  color: var(--primary-blue);
+  font-size: 1.25rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .service-areas-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-areas-map {
+    position: static;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .service-areas-benefits__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-areas-hero {
+    padding: 6rem 0 3rem;
+  }
+  
+  .expansion-notice {
+    padding: 2rem;
+  }
+  
+  .expansion-notice__features {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .service-areas-map__legend {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+}
