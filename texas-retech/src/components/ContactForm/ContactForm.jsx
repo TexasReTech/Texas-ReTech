@@ -44,22 +44,38 @@ const ContactForm = ({
     setSubmitStatus(null);
 
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      if (onSubmit) {
-        await onSubmit(formData);
-      }
-      
-      setSubmitStatus('success');
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        businessType: '',
-        message: '',
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'd5109e47-7ce8-4292-bbcc-e745c60c8e3b',
+          subject: 'New Quote Request from Texas Re-Tech Website',
+          from_name: 'Texas Re-Tech Website',
+          ...formData,
+        }),
       });
+
+      const result = await response.json();
+      
+      if (result.success) {
+        if (onSubmit) {
+          await onSubmit(formData);
+        }
+        
+        setSubmitStatus('success');
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          businessType: '',
+          message: '',
+        });
+      } else {
+        setSubmitStatus('error');
+      }
     } catch {
       setSubmitStatus('error');
     } finally {
