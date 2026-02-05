@@ -124,6 +124,10 @@
 }
 
 /* Materials Section */
+.materials {
+  background: linear-gradient(135deg, var(--gray-200) 0%, var(--gray-100) 100%);
+}
+
 .materials__header {
   display: flex;
   justify-content: space-between;
