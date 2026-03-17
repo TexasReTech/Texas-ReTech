@@ -104,7 +104,7 @@ const Footer = () => {
                 </li>
                 <li className="footer__contact-item">
                   <HiOutlineMail className="footer__contact-icon" />
-                  <a href="mailto:contact@texasretech.com">contact@texasretech.com</a>
+                  <a href="mailto:txretech@gmail.com">txretech@gmail.com</a>
                 </li>
                 <li className="footer__contact-item">
                   <HiOutlineClock className="footer__contact-icon" />

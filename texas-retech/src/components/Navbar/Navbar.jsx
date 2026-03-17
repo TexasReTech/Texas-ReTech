@@ -67,9 +67,9 @@ const Navbar = () => {
 
         {/* Contact Buttons */}
         <div className="navbar__actions">
-          <a href="mailto:contact@texasretech.com" className="navbar__contact-btn">
+          <a href="mailto:txretech@gmail.com" className="navbar__contact-btn">
             <HiOutlineMail />
-            <span>contact@texasretech.com</span>
+            <span>txretech@gmail.com</span>
           </a>
           <a href="tel:972-469-2588" className="navbar__contact-btn navbar__contact-btn--phone">
             <HiOutlinePhone />
@@ -107,8 +107,8 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="navbar__mobile-actions">
-            <a href="mailto:contact@texasretech.com" className="navbar__mobile-contact">
-              <HiOutlineMail /> contact@texasretech.com
+            <a href="mailto:txretech@gmail.com" className="navbar__mobile-contact">
+              <HiOutlineMail /> txretech@gmail.com
             </a>
             <a href="tel:972-469-2588" className="navbar__mobile-contact">
               <HiOutlinePhone /> 972-469-2588

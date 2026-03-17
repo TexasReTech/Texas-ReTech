@@ -18,7 +18,7 @@ const FAQChatbot = () => {
       id: 2,
       question: 'How do I schedule a pickup?',
       answer:
-        'Scheduling is easy! You can fill out our online form on the Get a Quote page, call us directly at 972-469-2588, or email contact@texasretech.com. We typically respond within 24 hours and can arrange pickup at your convenience.',
+        'Scheduling is easy! You can fill out our online form on the Get a Quote page, call us directly at 972-469-2588, or email txretech@gmail.com. We typically respond within 24 hours and can arrange pickup at your convenience.',
     },
     {
       id: 3,

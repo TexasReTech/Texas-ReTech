@@ -83,7 +83,7 @@ const Contact = () => {
                     <HiOutlineMail className="contact-info-icon" />
                     <div>
                       <strong>Email</strong>
-                      <a href="mailto:contact@texasretech.com">contact@texasretech.com</a>
+                      <a href="mailto:txretech@gmail.com">txretech@gmail.com</a>
                     </div>
                   </li>
                   <li>
